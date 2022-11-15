@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/hackathon-equipo-cuatro-nuevo/reto2/styles.css">
+    <title>Change box color on keyboard press</title>
+</head>
+<body>
+
+
+
+    <div id="tests" tabindex=1></div>
+    <script>
+window.onkeypress = function colorchange(x) {
+  if (x.keyCode == 114) {
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = "red";
+    }
+    return;
+  } else if (x.keyCode == 121) {
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = "yellow";
+    }
+    return;
+  } else if (x.keyCode == 119) {
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+      divs[i].style.backgroundColor = "white";
+    }
+    return;
+  } else {
+    alert("this key doesnt do anything")
+  }
+}
+    </script>
+</body>
+</html>
